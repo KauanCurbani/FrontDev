@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6600ff;
+}
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 9999;
+  color: #fff;
+  transition: 0.3s ease;
+}
+header .logo {
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #0066ff;
+}
+header .logo span {
+  color: #6600ff;
+  transition: 0.2s ease;
+}
+header.logo:hover span {
+  letter-spacing: -2px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+nav ul li a:hover {
+  color: #6600ff;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 3px;
+  background-color: #6600ff;
+  transition: 0.3s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  background-color: #0066ff;
+  box-shadow: 0 0 10px #0066ff;
+}
+nav ul li a#contact-btn {
+  background-color: #6600ff;
+  color: #e9e9e9;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+nav ul li a#contact-btn:hover {
+  color: #ddc6ff;
+  background-color: #0066ff;
+  box-shadow: 0 0 10px #0066ff;
+}
+nav ul li a#contact-btn::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+header.sticky {
+  height: 60px;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #6600ff4d;
+}
+header.sticky nav ul li a {
+  color: #6600ff;
+}
+
+header .toggle {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  
+}
+header .toggle i{
+    color: #fff;
+    font-size: 30px;
+}
+header.sticky i{
+    color: #000;
+}
+header.sticky .toggle {
+  color: #000;
+}
+
+@media (max-width: 550px) {
+  nav ul {
+    display: none;
+  }
+  header .toggle {
+    display: block;
+    color: #000;
+  }
+}
+/* Home */
+
+.home {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(45deg, #4c08b1, #021327);
+  background-size: cover;
+}
+.home svg {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+.home .left {
+  z-index: 1;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e9e9e9;
+}
+.home .right {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+}
+.home .right .blob {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(65deg, #6600ff, #0066ff);
+  overflow: hidden;
+  animation: blobMorph 7s infinite;
+  box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.295), 0 0 15px #11020a48;
+}
+@keyframes blobMorph {
+  0%,
+  100% {
+    border-radius: 51% 49% 25% 75% / 27% 23% 77% 73%;
+  }
+  25% {
+    border-radius: 33% 67% 36% 64% / 27% 31% 69% 73%;
+  }
+  50% {
+    border-radius: 61% 39% 73% 27% / 43% 49% 51% 57%;
+  }
+  75% {
+    border-radius: 26% 74% 35% 65% / 74% 46% 54% 26%;
+  }
+}
+.blob img {
+  height: 100%;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+}
+.home .left .welcome p {
+  font-size: 26px;
+  font-weight: 200;
+  transform: translateY(15px);
+}
+.home .left .welcome h1 {
+  color: #0066ff;
+  text-shadow: 0 0 15px #0066ff, 0 0 5px #ddc6ff41;
+  font-size: 40px;
+}
+
+/* About */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  background: linear-gradient(to bottom, #fff, #cecece);
+}
+.about svg {
+  position: absolute;
+  bottom: 0;
+}
+.about .left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .right {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about .right .aboutme {
+  margin-top: 60px;
+  position: relative;
+  height: 35%;
+  width: 80%;
+  transform: translateY(-50px);
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.about .right .aboutme h2 {
+  color: #6600ff;
+}
+.about .right .aboutme small {
+  margin-bottom: 15px;
+  color: #0066ff;
+}
+.about .right .aboutme p {
+  text-align: justify;
+}
+
+.about .left .blob {
+  width: 60%;
+  height: 50%;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #6600ff, #0066ff);
+  overflow: hidden;
+  animation: blobMorph 10s infinite alternate linear;
+  box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.295), 0 0 15px #11020a48;
+}
+.about .left .blob i {
+  font-size: 90px;
+  color: #fff;
+}
+/* Services */
+
+.services {
+  background: linear-gradient(to bottom, #6600ff, #5009b9);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services h1{
+    margin-top: 90px;
+    color: #0066ff;
+}
+.services .cards{
+    width: 300px;
+    height: 255px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.services .cards .card{
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    background-color: #e9e9e9;
+}
+.services svg{
+  position: absolute;
+  bottom: 0;
+}
+/* Contact */
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fff, #cecece);
+}
+@media (max-width: 668px) {
+  .home {
+    flex-direction: column;
+  }
+  .home .left {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+  }
+  .welcome {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .home .right .blob {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about .left {
+    display: none;
+  }
+}

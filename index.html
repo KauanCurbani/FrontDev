@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kauan Curbani | Front-End</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <header class="header sticky">
+      <div class="logo">Front<span>.Dev</span></div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" id="contact-btn">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="toggle"><i class='bx bx-menu'></i></div>
+    </header>
+    <section class="home" id="home">
+      <div class="left">
+        <div class="welcome">
+          <p>Hi! I'm</p>
+          <h1>Kauan Curbani</h1>
+        </div>
+      </div>
+      <div class="right">
+        <div class="blob"><img src="assets/img/kauan.png" alt="" /></div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#FFF"
+          fill-opacity="1"
+          d="M0,288L48,277.3C96,267,192,245,288,240C384,235,480,245,576,234.7C672,224,768,192,864,154.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <section class="about" id="about">
+      <div class="left">
+        <div class="blob"><i class='bx bx-code-alt'></i></box-icon></ion-icon></div>
+      </div>
+      <div class="right">
+        <div class="aboutme">
+          <h2>About Me</h2>
+          <small
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero,
+            necessitatibus?</small
+          >
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non animi
+            ad neque quidem, a magnam, incidunt dolorem odit, assumenda
+            cupiditate nemo. Vero cupiditate, voluptate harum error
+            necessitatibus labore cum alias!
+          </p>
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#6600ff"
+          fill-opacity="1"
+          d="M0,288L60,261.3C120,235,240,181,360,144C480,107,600,85,720,112C840,139,960,213,1080,250.7C1200,288,1320,288,1380,288L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <section class="services" id="services">
+        <h1>Services and Competences</h1>
+        <div class="cards">
+            <div class="card">
+                <i class='bx bxl-adobe'></i>
+            </div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L60,282.7C120,277,240,267,360,266.7C480,267,600,277,720,266.7C840,256,960,224,1080,202.7C1200,181,1320,171,1380,165.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </section>
+
+    <section class="contact" id="contact"></section>
+
+    <script>
+      window.addEventListener("scroll", function ()  {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+  </body>
+</html>
